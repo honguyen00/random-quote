@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/random-quote/static/css/main.310ff05a.css",
+    "main.js": "/random-quote/static/js/main.a9eb880c.js",
+    "index.html": "/random-quote/index.html",
+    "main.310ff05a.css.map": "/random-quote/static/css/main.310ff05a.css.map",
+    "main.a9eb880c.js.map": "/random-quote/static/js/main.a9eb880c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.310ff05a.css",
+    "static/js/main.a9eb880c.js"
+  ]
+}
