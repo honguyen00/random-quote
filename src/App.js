@@ -37,17 +37,21 @@ class App extends React.Component {
     this.handleNewQuote = this.handleNewQuote.bind(this);
 }
   async componentDidMount() {
-      this.handleNewQuote();
+    this.handleNewQuote();
   }
   async handleNewQuote() {
       this.setState({quote: await getRandomQuote(), randomColor: getRandomColor(randomColors)});
+      document.getElementById("text").classList.add('fadeIn');
+      setTimeout(() => {
+        document.getElementById("text").classList.remove('fadeIn');
+      }, 2000)
   }
 render() {
     return (
         <div className='App' style={{backgroundColor: `${this.state.randomColor}`}}>
         <div id='quote-box'>
             <i className="fa fa-quote-left" style={{color: `${this.state.randomColor}`}}></i>
-            <div id='text' style={{color: `${this.state.randomColor}`, marginLeft: '0.5rem'}}>{this.state.quote.content}</div>
+            <div id='text' style={{color: `${this.state.randomColor}`, marginLeft: '0.5rem'}} >{this.state.quote.content}</div>
             <div id='author' style={{color: `${this.state.randomColor}`}}>{`- ${this.state.quote.author}`}</div>
             <div className="d-flex justify-content-between">
                 <a style={{backgroundColor: `${this.state.randomColor}`, color: 'white', textAlign: 'center'}} className="btn" href='twitter.com/intent/tweet' target='_blank' id='tweet-quote'><i className="fa-brands fa-twitter"></i></a>
